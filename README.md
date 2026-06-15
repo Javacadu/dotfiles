@@ -4,15 +4,19 @@
 
 ```bash
 # Clone repo
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
+git clone https://github.com/Javacadu/dotfiles.git ~/dotfiles
 
 # Link configs
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.config/tmux ~/.config/tmux
 ln -sf ~/dotfiles/nvim ~/.config/nvim
 
 # Install TPM (tmux plugins)
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Start tmux and install plugins (Prefix + I, Prefix is Ctrl-s)
+tmux
 
 # Open nvim to install plugins
 nvim
@@ -20,17 +24,21 @@ nvim
 
 ## Requirements
 
-- macOS: `brew install tmux neovim git ripgrep fd fzf`
-- Ubuntu: `sudo apt install tmux neovim git ripgrep fd-find fzf`
+- macOS: `brew install tmux neovim git ripgrep fd fzf tmuxp`
+- Ubuntu: `sudo apt install tmux neovim git ripgrep fd-find fzf tmuxp`
+- Arch Linux: `sudo pacman -S tmux neovim git ripgrep fd fzf tmuxp`
 
 ## Post-Setup
 
 - Start tmux: `tmux`
 - Install tmux plugins: `Prefix + I` (Prefix is `Ctrl-s`)
 - Reload tmux config: `Prefix + r`
+- Start dev session: `tmuxp load dev`
 
-## Claude Code
+## opencode
 
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
+
+Or install opencode from https://opencode.ai

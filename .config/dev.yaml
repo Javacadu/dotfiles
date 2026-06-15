@@ -1,0 +1,9 @@
+session_name: dev
+
+windows:
+  - window_name: dev
+    layout: even-horizontal
+    focus: true
+    panes:
+      - shell: nvim
+      - shell: opencode
