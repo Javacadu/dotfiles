@@ -1,0 +1,44 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "username": "jacob",
+  "model": "opencode/big-pickle",
+  "small_model": "opencode/deepseek-v4-flash-free",
+  "enabled_providers": ["opencode"],
+  "provider": {
+    "opencode": {
+      "whitelist": [
+        "big-pickle",
+        "deepseek-v4-flash-free",
+        "mimo-v2.5-free",
+        "hy3-free",
+        "laguna-s-2.1-free",
+        "nemotron-3-ultra-free",
+        "nemotron-3.5-lightning-free",
+        "gpt-5-nano",
+        "claude-opus-5",
+        "gpt-5.5-pro"
+      ]
+    }
+  },
+  "instructions": ["AGENTS.md"],
+  "default_agent": "archmage",
+  "agent": { "build": { "disable": true } },
+  "references": {
+    "prompts": {
+      "path": "prompts",
+      "description": "Raw extracted system prompts from AI labs (coding, research, design, webapp). Read for full-fidelity guidance when a skill or agent points here."
+    }
+  },
+  "autoupdate": true,
+  "permission": {
+    "bash": { "*": "allow", "rm -rf *": "ask", "git push *": "ask" }
+  },
+  "compaction": { "auto": true, "prune": true, "tail_turns": 15 },
+  "tool_output": { "max_lines": 200, "max_bytes": 8192 },
+  "watcher": {
+    "ignore": ["node_modules/**", "dist/**", ".git/**", "venv/**", ".cache/**", "__pycache__/**"]
+  },
+  "formatter": false,
+  "lsp": false,
+  "snapshot": true
+}

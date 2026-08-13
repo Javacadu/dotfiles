@@ -38,7 +38,9 @@ nvim
 ## opencode
 
 ```bash
-npm install -g @anthropic-ai/claude-code
+# Link the council config (agents, commands, skills, prompt library)
+ln -sfn ~/dotfiles/opencode ~/.config/opencode
 ```
 
-Or install opencode from https://opencode.ai
+Install opencode from https://opencode.ai or `curl -fsSL https://opencode.ai/install | bash`.
+See `opencode/INSTALL.md` for full setup, per-machine changes, and how to keep the folder in sync.
