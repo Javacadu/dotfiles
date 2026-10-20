@@ -1,7 +1,7 @@
-# Install: opencode — The Council of Magic Users
+# Install: opencode
 
 This folder is the global opencode configuration (`~/.config/opencode/`): the
-council agents (archmage, oracle, plan), commands, skills, and the raw prompt
+agents (coder, research, plan), commands, skills, and the raw prompt
 library. Copy it to any machine to reproduce the exact setup.
 
 ## Prerequisite
@@ -66,7 +66,7 @@ Then commit and push.
 opencode
 ```
 
-- Tab cycles primary agents: archmage → oracle → plan.
-- @-mention or `/research`, `/review`, `/verify` summon the subagents.
+- Tab cycles primary agents: coder → research → plan.
+- @-mention or `/research`, `/review`, `/verify` invoke the subagents.
 - The plan agent runs shell commands without prompting, but `rm` is denied
   outright (`permission.bash` in `agent/plan.md`).

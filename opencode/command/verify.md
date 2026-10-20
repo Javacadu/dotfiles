@@ -1,6 +1,6 @@
 ---
-description: Summon the Sentinel to verify the produced work actually runs and meets its contract.
-agent: sentinel
+description: Verify the produced work actually runs and meets its contract.
+agent: verifier
 ---
 
 Verify the work. Focus: $ARGUMENTS

@@ -21,7 +21,7 @@
     }
   },
   "instructions": ["AGENTS.md"],
-  "default_agent": "archmage",
+  "default_agent": "coder",
   "agent": { "build": { "disable": true } },
   "references": {
     "prompts": {
